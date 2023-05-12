@@ -1,5 +1,6 @@
 
 import './App.css'
+import LoadingPage from './components/LoadingPage/LoadingPage'
 
 function App() {
  
@@ -7,6 +8,7 @@ function App() {
   return (
     <>
       <h1>EN CONSTRUCCIÖN</h1>
+      <LoadingPage/>
     </>
   )
 }
