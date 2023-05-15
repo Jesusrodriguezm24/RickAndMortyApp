@@ -13,14 +13,19 @@ import './App.css'
 const topIdLocations = 126;
 
 
+
+
 function App() {
  const [location, setLocation] = useState(null)
+
+ const loadData = async () => {
+  const locationInfo = await getLocationById(getRandomNumber(topIdLocations));
+  
+  setLocation(locationInfo);
+}
+
   useEffect(() => {
-     const loadData = async () => {
-       const locationInfo = await getLocationById(getRandomNumber(topIdLocations));
-       
-       setLocation(locationInfo);
-     }
+     
 
      loadData();
   }, [])
@@ -29,12 +34,24 @@ function App() {
   return (
     <>
       <HeaderPage/>
-  
 
-      {location ?  <Location location={location}/> : <LoadingPage/>}
-
-      
-      {location ? <ResidentsList residents={location.residents}/> : <LoadingPage/>}
+      <section className='controls_container'>
+       <button className='btn_randomLocation' onClick={loadData}>
+          Random Location
+        </button>
+        <div className='seach_container'>
+          <input type="text" placeholder="Write the Id"  />
+          <button>
+              <i className="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </section>
+      {location ? (<>
+                    <Location location={location}/>
+                    <ResidentsList residents={location.residents}/>
+                  </>
+                  ) 
+                : <LoadingPage/>}
     </>
   )
 }

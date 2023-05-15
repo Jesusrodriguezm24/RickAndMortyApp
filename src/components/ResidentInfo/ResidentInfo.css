@@ -1,15 +1,48 @@
-.residentsInfo_container{
+.residentInfo_container{
     width: 100%;
-    display: flex;
-    
-    flex-wrap: wrap;
+    border: 2px solid rgb(0, 8, 255);
+    border-radius: 15px;
+    padding: 8px;
+
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #1e282b;
+   
 }
-.residentsInfo_container ul{
-    width: 100%;
-      display: flex;
-    
-    flex-wrap: wrap;
+
+.residents_card{
+  width:  250px;
+  height: 420px;
+  
+  list-style: none;
 }
-.residentsInfo_container ul li{
+.residents_card div img{
+  width: 250px;
+  height: 250px ;
+
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.residentInfo_container ul li{
      width: 250px;
+
+     line-height: 18PX;
+     font-size: 14PX;
+     list-style: none;
+}
+.residentInfo_container h3{
+  text-align: center;
+  border-bottom: 2px solid #6c757741;
+  line-height: 25px;
+}
+.residentInfo_container ul li b{
+  width: 250px;
+   
+  color: #708285;
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  list-style: none;
 }

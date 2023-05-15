@@ -6,6 +6,9 @@ import ResidentInfo from "../ResidentInfo/ResidentInfo";
 const ResidentsList = ({ residents }) => {
   return (
     <section className="residents_container">
+
+      <h2>Residents</h2>
+
       {!residents.length && <p style={{fontSize:25, textAlign:"center"}}>No hay residentes en esta localidad</p>}
 
       {Boolean(residents.length) && (

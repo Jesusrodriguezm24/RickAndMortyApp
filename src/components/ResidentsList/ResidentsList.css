@@ -1,16 +1,22 @@
 .residents_container{
-    width: 71%;
-    padding: 2rem;
+    width: 85%;
+    padding: 1rem;
 
     background: #062226;
 }
-.residents_container ul{
-    width: 100%;
+.residents_container h2{
+    text-align: center;
+    color: #C8CECF;
+    margin-bottom: 2rem;
 }
 .ul_residents{
     width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-}
-.li_resident{
-    width: 250px;
+    gap: 10px;
+
+    list-style: none;
 }

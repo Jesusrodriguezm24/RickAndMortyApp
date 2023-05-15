@@ -19,7 +19,7 @@ const ResidentInfo = ({ url }) => {
   }, [url]);
 
   return (
-    <section className="residentsInfo_container">
+    <section className="residentInfo_container">
 
       {resident ? (
         <section className="residents_card">
@@ -32,7 +32,7 @@ const ResidentInfo = ({ url }) => {
               <b>Specie: </b> {resident?.species}
             </li>
             <li>
-              <b>Origin: </b> {resident?.origen?.name }
+              <b>Origin: </b> {resident?.origin?.name }
             </li>
             <li>
               <b>Status: </b> {resident?.status}
