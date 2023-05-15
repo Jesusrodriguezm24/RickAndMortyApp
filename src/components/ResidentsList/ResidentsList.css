@@ -1,0 +1,16 @@
+.residents_container{
+    width: 71%;
+    padding: 2rem;
+
+    background: #062226;
+}
+.residents_container ul{
+    width: 100%;
+}
+.ul_residents{
+    width: 100%;
+    flex-wrap: wrap;
+}
+.li_resident{
+    width: 250px;
+}

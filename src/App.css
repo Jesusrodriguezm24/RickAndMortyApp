@@ -7,11 +7,17 @@
   box-sizing: border-box;
 }
 :root{
-  background: #212121;
+  width: 100%;
+
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: #FBFBFB;
+
+  background: #05292E;
+
 }
 #root{
   width: 100%;
-  height: 99vh;
 
   display: flex;
   flex-direction: column;
@@ -19,6 +25,4 @@
   align-items: center;
   
 }
-h1{
-  color: white;
-}
+

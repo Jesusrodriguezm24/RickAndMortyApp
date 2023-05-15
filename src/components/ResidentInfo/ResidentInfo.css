@@ -1,0 +1,15 @@
+.residentsInfo_container{
+    width: 100%;
+    display: flex;
+    
+    flex-wrap: wrap;
+}
+.residentsInfo_container ul{
+    width: 100%;
+      display: flex;
+    
+    flex-wrap: wrap;
+}
+.residentsInfo_container ul li{
+     width: 250px;
+}

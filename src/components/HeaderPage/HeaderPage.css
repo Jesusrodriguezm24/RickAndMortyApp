@@ -1,0 +1,26 @@
+.header_container{
+    
+    width: 100%;
+}
+.header_img_cover{
+    width: 100%;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+
+}
+.header_img_cover img:first-child{
+    max-width: 100%;
+  
+}
+.header_img_cover img:last-child{
+    position: absolute;
+    width: 24%;
+    height: auto;
+
+    left: 40%;
+    top: 18%;
+    z-index: 1;
+}
