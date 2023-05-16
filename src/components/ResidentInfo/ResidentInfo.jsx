@@ -24,25 +24,25 @@ const ResidentInfo = ({ url }) => {
       {resident ? (
         <section className="residents_card">
           <div>
-            <img src={resident?.image} alt={resident?.name} />
+            <img src={resident.image} alt={resident.name} />
           </div>
-          <h3>{resident?.name}</h3>
+          <h3>{resident.name}</h3>
           <ul>
             <li>
-              <b>Specie: </b> {resident?.species}
+              <b>Specie: </b> {resident.species}
             </li>
             <li>
-              <b>Origin: </b> {resident?.origin?.name }
+              <b>Origin: </b> {resident?.origin.name }
             </li>
             <li>
-              <b>Status: </b> {resident?.status}
+              <b>Status: </b> {resident.status}
             </li>
             <li> 
               <b>Appearances: </b>{resident?.episode.length}
             </li>
           </ul>
         </section>
-    ): <p>LoadingData</p>}
+    ): <p>LoadingData...</p>}
       
     </section>
   );
