@@ -12,7 +12,7 @@
 }
 .residents_card{
   width:  250px;
-  height: 420px;
+  height: 420px auto;
   
   list-style: none;
 }
