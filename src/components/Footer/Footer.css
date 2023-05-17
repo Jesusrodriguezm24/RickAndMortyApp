@@ -1,0 +1,27 @@
+.footer_container{
+    width: 100%;
+      
+    display: flex;
+    justify-content: center;
+    align-items: end;
+
+    margin-top: 20px;
+  }
+  .createBy{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 5px;
+  
+    min-height: 40px;
+    background-color: var(--light_red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:11px;
+  
+    color: #FFFFFF;
+  }
+  .createBy p{
+    font-size:12px;
+  }

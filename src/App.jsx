@@ -5,8 +5,10 @@ import getRandomNumber from './utils/getRandomNumber'
 import Location from './components/Location/Location'
 import ResidentsList from './components/ResidentsList/ResidentsList'
 import HeaderPage from './components/HeaderPage/HeaderPage'
+import Footer from './components/Footer/Footer'
 
 import './App.css'
+
 //Tope de ubicaciones por Id.
 const topIdLocations = 126;
 
@@ -15,13 +17,11 @@ function App() {
  const [numId, setNumId] = useState('');
  const [errorIdLocation, setErrorIdLocation] = useState('');
 
-
  const loadData = async () => {
   const locationInfo = await getLocationById(getRandomNumber(topIdLocations));
   
   setLocation(locationInfo);
 }
-
 
 const handlerChange = (e) => {
   const idValue = e.target.value;
@@ -37,13 +37,6 @@ const handlerChange = (e) => {
     }
     setNumId(idValue);
 }
-
-const handlerLoadData = async (e) => {
-  e.preventDefault();
-  setLocation(await getLocationById(getRandomNumber(topIdLocations)));
-}
-
-
 
 const handlerSubmit = async (e) => {
   e.preventDefault();
@@ -67,22 +60,19 @@ const handlerKeyPress = (e) => {
      loadData(getRandomNumber(topIdLocations));
   }, [])
   
-   
   return (
     <>
       <HeaderPage/>
 
-      <form className='controls_container' onSubmit={handlerSubmit}>
-       <button className='btn_randomLocation' onClick={handlerLoadData}>
-          Random Location
-        </button>
+      <form className='form_container' onSubmit={handlerSubmit}>
         <div className='seach_container'>
           <input type="text" value={numId} onKeyDown={handlerKeyPress} onChange={handlerChange} placeholder="Write the Id (1 to 126)"  />
           <button type='submit'>
-              <i className="fa-solid fa-magnifying-glass"></i>
+            {!numId ? <i className="fa-solid fa-repeat"></i> : <i className="fa-solid fa-magnifying-glass"></i>}  
           </button>
         </div>
       </form>
+
       <p style={{color: 'red'}}>{errorIdLocation}</p>
       {location ? (<>
                     <Location location={location}/>
@@ -90,8 +80,8 @@ const handlerKeyPress = (e) => {
                   </>
                   ) 
                 : <LoadingPage/>}
+      <Footer/>
     </>
   )
 }
-
 export default App

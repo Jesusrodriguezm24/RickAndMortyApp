@@ -3,7 +3,7 @@
   width: 71%;
   height: 126px;
 
- margin-bottom: 20px;
+  margin-bottom: 20px;
   background: #062226;
 }
 .location_container h2{
@@ -24,10 +24,66 @@
 .location_container ul li{
     color: #C8CECF;
     list-style: none;
+
+    font-size: 20px;
 }
 .location_container ul li b{
 
     color: #7EB239;
-  
 }
 
+@media screen and (max-width: 1075px) and (min-width: 992px) {
+    .location_container ul li{
+       font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 991px) and (min-width: 769px) {
+    .location_container h2{
+        font-size: 26px;
+    }
+    .location_container ul li{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) and (min-width: 577px) {
+    .location_container h2{
+        font-size: 24px;
+    }
+    .location_container ul li{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 576px) and (min-width: 380px) {
+    .location_container ul{
+        flex-direction: column;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .location_container h2{
+        font-size: 18px;
+    }
+
+    .location_container ul li{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 379px) and (min-width: 320px) {
+    .location_container ul{
+        flex-direction: column;
+        gap: 5px;
+        justify-content: center;
+        align-items: center;
+    }
+    .location_container h2{
+        font-size: 18px;
+    }
+    .location_container ul li{
+        font-size: 12px;
+    }
+}

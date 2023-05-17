@@ -12,5 +12,4 @@ const HeaderPage = () => {
     </section>
   )
 }
-
 export default HeaderPage
