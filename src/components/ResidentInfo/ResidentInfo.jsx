@@ -11,7 +11,6 @@ const ResidentInfo = ({ url }) => {
     const loadResidents = async () => {
       const residentData = await getCharacterByUrl(url);
       setResident(residentData);
-      console.log(residentData)
     };
 
     loadResidents();
